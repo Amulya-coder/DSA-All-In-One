@@ -34,6 +34,10 @@ temp->next=n;
 
 node* merge(node* &head1,node* &head2){
 
+if(head1==NULL)return head1;
+if(head2==NULL)return head2;
+
+
 node* ptr1=head1;
 node* ptr2=head2;
 
@@ -49,24 +53,27 @@ ptr3->next=ptr1;
 ptr1=ptr1->next;
 
 }
-if(ptr2->data<ptr1->data){
+else{
     ptr3->next=ptr2;
     ptr2=ptr2->next;
 }
 ptr3=ptr3->next;
 }
 
-if(ptr1!=NULL){
-    ptr3->next=ptr1;
-    ptr1=ptr1->next;
-    ptr3=ptr3->next;
-}
 
-if(ptr2!=NULL){
-    ptr3->next=ptr2;
-    ptr2=ptr2->next;
-    ptr3=ptr3->next;
-}
+ptr3->next=ptr1!=NULL?ptr1:ptr2;
+
+// if(ptr1!=NULL){
+//     ptr3->next=ptr1;
+//     ptr1=ptr1->next;
+//     ptr3=ptr3->next;
+// }
+
+// if(ptr2!=NULL){
+//     ptr3->next=ptr2;
+//     ptr2=ptr2->next;
+//     ptr3=ptr3->next;
+// }
 
 return dummyNode->next;
 }
