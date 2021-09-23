@@ -7,6 +7,7 @@ using namespace std;
 
 void merge(int arr[],int l,int mid,int r){
 
+//Copying the data into two separate arrays
 int n1=mid-l+1;
 int n2=r-mid;
 
@@ -65,7 +66,7 @@ if(l<r){
 //Finding the middle element
 int mid=(l+r)/2;
 
-//Now solving the on left and right part by Recursively call the mergeSort 
+//Recurrsively calling the function on left and right part to further divide the subarray
 mergeSort(arr,l,mid);
 mergeSort(arr,mid+1,r);
 
