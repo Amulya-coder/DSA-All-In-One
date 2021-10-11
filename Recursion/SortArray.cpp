@@ -1,31 +1,40 @@
-//Check if an array is sorted or not using recursion
-
 #include<bits/stdc++.h>
 
 using namespace std;
 
+bool isSorted(int arr[],int n){
+	if(n==1 or n==0){
+		return true;
+	}
 
-bool sortArray(int arr[],int n){
+								 //changing the address of the array
+	if(arr[0]<arr[1] and isSorted(arr+1,n-1)){
+		return true;
+	}
 
-if(n==1){
-    return true;
+	return false;
 }
 
-bool remainArray=sortArray(arr+1,n-1);
-return (arr[0]<arr[1] && remainArray);
+bool isSortedTwo(int arr[],int i,int n){
+	//base condition
+	if(i==n-1){
+		return true;
+	}
 
+	if(arr[i]<arr[i+1] and isSortedTwo(arr,i+1,n)){
+		return true;
+	}
 
+	return false;
 }
-
 
 
 int main(){
 
+	int arr[]={1,2,5,7,8};
 
-int arr[]={4,2,3,1,5};
-
-cout<<sortArray(arr,5)<<endl;
-
-
-    return 0;
+	int n=sizeof(arr)/sizeof(arr[0]);
+	// cout<<isSorted(arr,n);
+	cout<<isSortedTwo(arr,0,n);
+	return 0;
 }
