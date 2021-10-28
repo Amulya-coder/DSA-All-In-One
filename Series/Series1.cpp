@@ -2,9 +2,8 @@
 
 using namespace std;
 
-//1 2 3 6 9 18 27
-
-//
+// n=7
+// 1 2 3 6 9 18 27
 int main(){
 
 	int n,first=1,second=2,c;
