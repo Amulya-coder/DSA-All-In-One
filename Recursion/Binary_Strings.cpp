@@ -12,7 +12,7 @@ void helper(string str, int n, int i)
 		return;
 	}
 
-	int s1 = str;
+	string s1 = str;
 	s1.push_back('0');
 	helper(s1, n, i + 1);
 
