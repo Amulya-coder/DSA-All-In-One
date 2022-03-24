@@ -26,6 +26,7 @@ public:
                 else
                 {
                     ans = false;
+                    break;
                 }
             }
             else if (x[i] == ')')
@@ -37,6 +38,7 @@ public:
                 else
                 {
                     ans = false;
+                    break;
                 }
             }
 
@@ -49,6 +51,7 @@ public:
                 else
                 {
                     ans = false;
+                    break;
                 }
             }
         }
