@@ -40,15 +40,17 @@ public:
 
         for (int i = 0; i < n; i++)
         {
-            if (mp.find(cards[i]) == mp.end())
+            if (mp.find(cards[i]) != mp.end())
             {
                 ans = min(i - mp[cards[i]] + 1, ans);
                 mp[cards[i]] = i;
             }
             else
             {
-                mp[cards[i]] = [i]
+                mp[cards[i]] = i;
             }
         }
+
+        return ans < 0 ? -1 : ans;
     }
 };
