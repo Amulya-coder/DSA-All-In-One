@@ -1,3 +1,4 @@
+// Problem link: https://leetcode.com/problems/maximal-rectangle/
 #include <bits/stdc++.h>
 
 using namespace std;
