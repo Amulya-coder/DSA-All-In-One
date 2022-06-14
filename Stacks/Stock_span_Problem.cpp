@@ -1,3 +1,4 @@
+// Problem link: https://practice.geeksforgeeks.org/problems/stock-span-problem-1587115621/1/?page=1&difficulty[]=1&category[]=Stack&sortBy=submissions
 #include <bits/stdc++.h>
 
 using namespace std;
