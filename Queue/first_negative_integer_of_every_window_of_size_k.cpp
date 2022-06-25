@@ -17,8 +17,39 @@ int main()
     int k;
     cin >> k;
     vector<int> v;
+    queue<int> q;
+    // optimised using queue
+
+    for (int i = 0; i <= n - k; i++)
+    {
+        bool flag = false;
+        int j = i + k - 1;
+        int m = i;
+        while (m <= j)
+        {
+            q.push(a[m]);
+            m++;
+        }
+
+        while (!q.empty())
+        {
+            if (q.front() < 0)
+            {
+                v.push_back(q.front());
+                q.pop();
+                flag = true;
+            }
+            else
+            {
+                q.pop();
+            }
+        }
+        if (flag == false)
+            v.push_back(0);
+    }
 
     // Brute force O(n^2)
+    /*
     for (int i = 0; i <= n - k; i++)
     {
         bool flag = false;
@@ -42,6 +73,7 @@ int main()
     {
         cout << v[i] << " ";
     }
+    */
 
     return 0;
 }
