@@ -17,6 +17,7 @@ public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
     {
 
+        // Time Complexity O(n+m) max of the two linked list length
         ListNode *dummynode = new ListNode(0);
         ListNode *temp = dummynode;
 
