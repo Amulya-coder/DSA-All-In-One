@@ -17,6 +17,7 @@ public:
     ListNode *oddEvenList(ListNode *head)
     {
 
+        // Time Complexity O(n) and Space Complexity O(1)
         if (!head or !head->next or !head->next->next)
         {
             return head;
