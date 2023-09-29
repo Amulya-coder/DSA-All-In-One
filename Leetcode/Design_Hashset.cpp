@@ -28,8 +28,3 @@ class MyHashSet
             return false;
     }
 };
-
-MyHashSet *obj = new MyHashSet();
-obj->add(key);
-obj->remove(key);
-bool param_3 = obj->contains(key);
