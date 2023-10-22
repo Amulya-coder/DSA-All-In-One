@@ -5,13 +5,12 @@ using namespace std;
 int lowerBound(vector<int> arr, int n, int x)
 {
     // Write your code here
+    // Lower bound - smallest for which arr[ind]>=x
 
     int low = 0;
     int high = n - 1;
 
-    if (arr[high] < x)
-        return n;
-    int ans;
+    int ans = n;
     while (low <= high)
     {
 
@@ -29,8 +28,5 @@ int lowerBound(vector<int> arr, int n, int x)
         }
     }
 
-    if (low > high)
-    {
-        return low;
-    }
+    return ans;
 }
