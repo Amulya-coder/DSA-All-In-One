@@ -51,20 +51,22 @@ bool isValid(vector<vector<char>> &board)
                         return false;
                     }
                     else
-                        row[board[i][j] - '1'] = true;
+                        row[board[i][k] - '1'] = true;
                 }
 
-                // column checking
-                for (int k = 0; k < 9; k++)
+                //col checking
+                if (board[j][i] != '.')
                 {
-                    if (row[board[k][j] - '1'])
-                    {
+                    if(col[board[j][i]-'1']){
                         return false;
                     }
                     else
-                        row[board[k][j] - '1'] = true;
+                        col[board[j][i]-'1']=true;   
                 }
+
             }
+            // column checking
+                
         }
     }
 
